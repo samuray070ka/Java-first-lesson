@@ -227,7 +227,7 @@ public class Four {
     static void happyBirthday(String name, int age){
         System.out.println("Happy Birthday to you!");
         System.out.printf("Happy Birthday dear %s!\n", name);
-        System.out.printf("You are %d yeras old!\n", age);
+        System.out.printf("You are %d years old!\n", age);
         System.out.println("Happy Birthday to you!\n");
     }
     static double square(double number){
