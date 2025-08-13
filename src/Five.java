@@ -1,12 +1,10 @@
 import java.util.Scanner;
-
 public class Five {
     static Scanner scanner =  new Scanner(System.in);
     public static void main(String[] args) {
         double balance = 0;
         boolean isRunning = true;
         int choice;
-
         while (isRunning){
             System.out.println("**********");
             System.out.println("BANKING PROGRAM");
@@ -16,7 +14,6 @@ public class Five {
             System.out.println("3. Withdraw");
             System.out.println("4. Exit");
             System.out.println("**********");
-
             System.out.print("Enter your choice (1-4): ");
             choice = scanner.nextInt();
             switch (choice){
@@ -27,7 +24,6 @@ public class Five {
                 default -> System.out.println("Invalid choice");
             }
         }
-
         System.out.println("*********");
         System.out.println("Thank you! Have a nice day!");
         scanner.close();
@@ -52,7 +48,6 @@ public class Five {
         double amount;
         System.out.print("Enter amount to withdraw: ");
         amount = scanner.nextDouble();
-
         if (amount > balance){
             System.out.println("INSUFFICIENT FUNDS");
             return 0;
@@ -60,7 +55,6 @@ public class Five {
             System.out.println("Amount can't be negative");
             return 0;
         }else {
-
             return amount;
         }
     }
