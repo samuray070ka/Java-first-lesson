@@ -28,11 +28,12 @@ public class Six {
         //        }else {
         //            System.out.println("❌ Xato javob berdingiz mayli keyingi safar topasiz! \n" + "To'g'ri javob " + result);
         //        }
-
+        int ball = 0;
         Random randomNumber = new Random();
         Scanner scanner = new Scanner(System.in);
         System.out.println("...............");
         System.out.println("Siz bilan xozir bir o'yin o'ynaymiz, men hozir bitta raqam o'ylayman uni siz topishingiz kerak bo'ladi!");
+        System.out.println("Sizga ball ham beraman hozirda ballingiz: " + ball + " ball");
         System.out.println("...............");
         System.out.println("1.Oson daraja: 1 dan 5 gacha raqam o'yladim toping!");
         System.out.println("2.O'rtacha daraja: 1 dan 15 gacha raqam o'yladim toping!");
@@ -46,12 +47,16 @@ public class Six {
             int numberEasy = randomNumber.nextInt(1, 6);
             if (easy == numberEasy){
                 System.out.println("✅To'g'ri topdingiz man o'ylagan raqam shu edi: " + numberEasy);
+                ball += 10;
+                System.out.println("To'plagan ballingiz: " + ball + " ball");
             }
             else {
                 System.out.print("⚠ Siz yozgan raqam xato yana bir bor urunib ko'ring: ");
                 int imkon = scanner.nextInt();
                 if (numberEasy == imkon){
                     System.out.println("✅To'g'ri topdingiz 2-urinishda bo'lsa ham man o'ylagan raqam shu edi: " + numberEasy);
+                    ball += 5;
+                    System.out.println("To'plagan ballingiz: " + ball + " ball");
                 }else {
                     System.out.println("❌Xato man o'ylagan son bu edi: " + numberEasy);
                 }
@@ -62,12 +67,16 @@ public class Six {
             int normal =  scanner.nextInt();
             if (normal == numberNormal){
                 System.out.println("✅To'g'ri topdingiz man o'ylagan raqam shu edi: " + numberNormal);
+                ball += 20;
+                System.out.println("To'plagan ballingiz: " + ball + " ball");
             }
             else {
                 System.out.print("⚠ Siz yozgan raqam xato yana bir bor urunib ko'ring: ");
                 int imkon = scanner.nextInt();
                if (numberNormal == imkon){
                    System.out.println("✅To'g'ri topdingiz 2-urinishda bo'lsa ham man o'ylagan raqam shu edi: " + numberNormal);
+                   ball += 10;
+                   System.out.println("To'plagan ballingiz: " + ball + " ball");
                }else{
                    System.out.println("❌Xato man o'ylagan son bu edi: " + numberNormal);
                }
@@ -78,12 +87,16 @@ public class Six {
             int hard =  scanner.nextInt();
             if (hard == numberHard){
                 System.out.println("✅To'g'ri topdingiz man o'ylagan raqam shu edi: " + numberHard);
+                ball += 30;
+                System.out.println("To'plagan ballingiz: " + ball + " ball");
             }
             else {
                 System.out.print("⚠ Siz yozgan raqam xato yana bir bor urunib ko'ring: ");
                 int imkon = scanner.nextInt();
                 if (numberHard == imkon){
                     System.out.println("✅To'g'ri topdingiz 2-urinishda bo'lsa ham man o'ylagan raqam shu edi: " + numberHard);
+                    ball += 20;
+                    System.out.println("To'plagan ballingiz: " + ball + " ball");
                 }else{
                     System.out.println("❌Xato man o'ylagan son bu edi: " + numberHard);
                 }
